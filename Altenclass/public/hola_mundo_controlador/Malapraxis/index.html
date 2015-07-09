@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en" ng-app="app" ng-controller="appCtrl as vm">
+
+<head>
+
+<meta charset="utf-8">
+<title>Hola Mundo, controladores</title>
+<script src= "http://ajax.googleapis.com/ajax/libs/angularjs/1.2.26/angular.min.js"></script>
+</head>
+
+<body>
+
+<input type="text" ng-model="vm.campotexto">
+<br/>
+{{ vm.campotexto }} - {{ vm.camposelect }}
+<br/>
+
+<select ng-model="vm.camposelect">
+<option value="uno">1</option>
+<option value="dos">2</option>
+</select>
+
+<input type="button" ng-click="vm.campotexto='Este es el campo de texto'" value="Pulsa aquí">
+
+
+    
+<script>
+
+var app = angular.module("app", []);
+app.controller("appCtrl", function(){
+    //podemos incluir una variable llamada this, de forma "var vm = this;" y así la sintaxis es mucho más limpia
+    this.camposelect = "uno";
+    this.campotexto = "Campo de texto";
+});
+
+</script>
+    
+</body>
+</html>
