@@ -1,0 +1,12 @@
+/* Styles go here */
+body {
+      padding-top: 10px;
+      background-color: #F5F5F5;
+    }
+.nav > li {
+    float:none;
+    display:inline-block;
+    *display:inline; /* Internet Explorer 7 compatibility */
+    *zoom:1;
+    vertical-align: top;
+}

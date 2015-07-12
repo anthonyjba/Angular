@@ -1,0 +1,41 @@
+<div class="container">
+        
+    <div class="col-md-9">
+        <!--Sidebar content-->
+
+        Buscar: <input ng-model="query">
+        Ordenar por:
+        <select ng-model="orderProp">
+          <option value="nombre">Nombre</option>
+            <option value="edad">Edad</option>
+          <option value="email">Email</option>
+          <option value="tel">Telefono</option>
+        </select>
+
+    </div>
+		<div class="row">
+
+		<div class="col-md-9">
+
+		<table class="table table-striped">
+			<thead>
+			  <tr>
+				<th>#</th><th>Nombre</th><th>Edad</th><th>Email</th><th>Telefono</th><th></th>
+			  </tr>
+			</thead>
+			<tbody>
+			  <tr ng-repeat="order in orders | filter:query | orderBy : orderProp">
+				<td>{{ order.id }}</td><td>{{ order.nombre }}</td><td>{{ order.edad }}</td><td>{{ order.email }}</td><td>{{ order.tel }}</td>
+				<td><a href="DetailOrder/1234">show details</a></td>
+			  </tr>
+			</tbody>
+		  </table>
+            
+            
+		  	<div ng-view></div>
+
+		</div>
+
+		</div>
+
+    </div><!-- /.container -->

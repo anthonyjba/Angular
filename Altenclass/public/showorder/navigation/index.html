@@ -2,40 +2,27 @@
 <html lang="en">
   <head>
 
-    <title>AngularJS Routing example</title>
+    <title>AngularJS</title>
 
-    <link href="http://netdna.bootstrapcdn.com/bootstrap/3.0.0/css/bootstrap.min.css" rel="stylesheet">
-
-    <style>
-		body {
-		  padding-top: 10px;
-		  background-color: #F5F5F5;
-		}
-	.nav > li {
-		float:none;
-		display:inline-block;
-		*display:inline; /* Internet Explorer 7 compatibility */
-		*zoom:1;
-		vertical-align: top;
-	}
-
-    </style>
-
+    <!--    <link href="http://netdna.bootstrapcdn.com/bootstrap/3.0.0/css/bootstrap.min.css" rel="stylesheet">-->
+    <link href="http://localhost:3000/angular-1.2.28/docs/components/bootstrap-3.1.1/css/bootstrap.min.css" rel="stylesheet">
+    <link href="css/style.css" rel="stylesheet">
     <!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
     <!--[if lt IE 9]>
       <script src="../../assets/js/html5shiv.js"></script>
       <script src="../../assets/js/respond.min.js"></script>
     <![endif]-->
+    <base href="/showorder/navigation/">
   </head>
 
-  <body ng-app="sampleApp">
+  <body ng-app="ordersModel">
 
     <div class="container">
 		<div class="row">
 		<div class="col-md-3">
 		   <ul class="nav">
-				<li><a href="#AddNewOrder"> Add New Order </a></li>
-				<li><a href="#ShowOrders"> Show Order </a></li>
+				<li><a href="AddNewOrder"> Add New Order </a></li>
+				<li><a href="ShowOrders"> Show Order </a></li>
 			</ul>
 		</div>
 		<div class="col-md-9">
@@ -47,7 +34,7 @@
     </div><!-- /.container -->
 
 
-	<script type="text/ng-template" id="add_order.html">
+	<!--<script type="text/ng-template" id="add_order.html">
 
 		<h2> Add Order </h2>
 		{{message}}
@@ -55,15 +42,18 @@
 	</script>
 
 	<script type="text/ng-template" id="show_orders.html">
-
 		<h2> Show Orders </h2>
 		{{message}}
+      </script>-->        
 
-	</script>
 
-
-	<script src="http://ajax.googleapis.com/ajax/libs/angularjs/1.0.7/angular.min.js"></script>
-	<script src="app.js"></script>
+<!--	<script src="http://ajax.googleapis.com/ajax/libs/angularjs/1.0.7/angular.min.js"></script>-->
+    <script src="http://localhost:3000/angular-1.2.28/angular.js"></script>
+    <script src="http://localhost:3000/angular-1.2.28/angular-route.min.js"></script>
+    <script src="js/app.js"></script>
+    <script type="text/javascript" src="controllers/ordersController.js"></script>
+    <script type="text/javascript" src="models/ordersModel.js"></script>
+	
 
   </body>
 </html>
