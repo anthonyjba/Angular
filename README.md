@@ -4,11 +4,15 @@ Proyectos en Angular
 
 Pasos del configurar un app Angular
 ===================================
-npm -install -g express-generator
-express "nombre_carpeta"
-cd "nombre_carpeta"
-npm install
-npm start
+* npm -install -g express-generator
+
+* express "nombre_carpeta"
+
+* cd "nombre_carpeta"
+
+* npm install
+
+* npm start
 
 Services
 ======== 
@@ -20,10 +24,11 @@ Tratar previamente los datos del Json (Devuelve una funcion, similar al provider
 
 $rootScope
 ==========
-$parent --> permite acceder al scope padre (acceso jerarquico)
+* $parent --> permite acceder al scope padre (acceso jerarquico)
 
-$Route url ":/mensaje" (variable de tipo parametro)
-Tips: para poder eliminar el "#" de la url, usaremos $locationProvider
+* $Route url ":/mensaje" (variable de tipo parametro)
+
+* Tips: para poder eliminar el "#" de la url, usaremos $locationProvider
 
 Directives
 ==========
@@ -47,58 +52,66 @@ myApp.directive('counter', function(){
 })
 
 
-filters
+Filters
 =======
-ascendente  : order by nombre  
-descendente : order by -nombre
+- ascendente  : order by nombre  
+- descendente : order by -nombre
+
 $scope:
 
 module.filter("maxlength", function)={
+
   return function(text,max){
+
     if(text!=null){
-	if(text.length > max)
-	return text.substring(0,max) + "...";
+
+	   if(text.length > max)
+
+	     return text.substring(0,max) + "...";
+
     }
+
   }
+
 }
 
-/*****************************************************/
-/*  INSTALACION
-/*****************************************************/
+INSTALACION
+===========
 
 * Ruta donde se instala los modules npm globales:
+
   C:\Users\Usuario\AppData\Roaming\npm\node_modules
 
 GIT
 ===
-npm install git
-npm intall git-cli
+- npm install git
+- npm intall git-cli
 
 GRUNT
 =====
-npm install -g grunt --save-dev
-grunt --version
+- npm install -g grunt --save-dev
+- grunt --version
 
 Desde el directorio creado ejecutar:
-npm install --save -dev
-grunt --force
+- npm install --save -dev
+- grunt --force
 
 BOWER
 =====
-npm install -g bower
-npm update -g bower
-bower install angular
-bower install angular-route
-bower install angular-bootstrap
+- npm install -g bower
+- npm update -g bower
+- bower install angular
+- bower install angular-route
+- bower install angular-bootstrap
 
 YEOMAN
 ======
-npm install -g yo
-npm install -g generator-angular
-mkdir yo && cd yo
-escribir dentro del directorio: yo -->(Angular o karma)
-configurar paso a paso
-grunt serve (Para poder ejecutar el servidor)
+- npm install -g yo
+- npm install -g generator-angular
+- mkdir yo && cd yo
+- escribir dentro del directorio: yo -->(Angular o karma)
+- configurar paso a paso
+- grunt serve (Para poder ejecutar el servidor)
 
 
 
