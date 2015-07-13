@@ -1,16 +1,9 @@
 
 //un servicio viene a ser un modelo
 sampleApp.service("ordersModel", function(){
- 
-    this.getOrders = function(){
-        return [
-            {
-                id : 0,
-                nombre : "Israel Parra",
-                edad : "32",
-                email: "israelp@yahoo.com",
-                tel : "654992030"
-            },
+    
+    var orders = {}
+    orders.data = [            
             {
                 id : 1,
                 nombre : "Andrés Cuenca",
@@ -38,8 +31,18 @@ sampleApp.service("ordersModel", function(){
                 edad : "45",
                 email: "Manuel.lopez@amazon.com",
                 tel : "69898067"
+            },
+            {
+                id : 5,
+                nombre : "Israel Parra",
+                edad : "32",
+                email: "israelp@yahoo.com",
+                tel : "654992030"
             }
-        ]
+        ];
+ 
+    this.getOrders = function(){
+        return orders;
     }
  
 });

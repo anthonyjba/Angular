@@ -4,12 +4,13 @@
         <!--Sidebar content-->
 
         Buscar: <input ng-model="query">
-        Ordenar por:
+        Campo a ordenar:
         <select ng-model="orderProp">
-          <option value="nombre">Nombre</option>
+            <option value="" selected>Ordenar por:</option>
+            <option value="nombre">Nombre</option>
             <option value="edad">Edad</option>
-          <option value="email">Email</option>
-          <option value="tel">Telefono</option>
+            <option value="email">Email</option>
+            <option value="tel">Telefono</option>
         </select>
 
     </div>
@@ -24,7 +25,7 @@
 			  </tr>
 			</thead>
 			<tbody>
-			  <tr ng-repeat="order in orders | filter:query | orderBy : orderProp">
+			  <tr ng-repeat="order in orders.data | filter:query | orderBy : orderProp">
 				<td>{{ order.id }}</td><td>{{ order.nombre }}</td><td>{{ order.edad }}</td><td>{{ order.email }}</td><td>{{ order.tel }}</td>
 				<td><a href="DetailOrder/1234">show details</a></td>
 			  </tr>
@@ -32,8 +33,7 @@
 		  </table>
             
             
-		  	<div ng-view></div>
-
+		  	
 		</div>
 
 		</div>

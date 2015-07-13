@@ -3,33 +3,38 @@
       <h1 class="panel-title">New Order</h1>
     </div>
     <div class="panel-body">
-        <form name="orderForm" class="form-horizontal" role="form" novalidate>
-            <div class="form-group">
-              <div class="col-sm-12">
-                <label>
-                      Nombre: 
-                  </label><input type="text" placeholder="Ingrese su nombre"></input>
-              </div>
-            <div class="col-sm-12">
-                <label>
-                      Edad: 
-                  </label><input type="text" placeholder="Ingrese su edad"></input>
-              </div>
-            <div class="col-sm-12">
-                <label>
-                      Email: 
-                  </label><input type="text" placeholder="Ingrese su email"></input>
-              </div>
-            <div class="col-sm-12">
-                <label>
-                      Teléfono: 
-                  </label><input type="text" placeholder="Ingrese su teléfono"></input>
-              </div>
-              <div class="col-sm-12">
-                <button type="submit" class="btn btn-lg">guardar</button>
-              </div>
+        <form name="orderForm" class="form-horizontal" role="form" data-ng-submit="addOrden()">
+            <div class="form-group">              
+                <label class="col-sm-2 control-label">Nombre: </label>
+                <div class="col-sm-10">
+                    <input type="text" name="nombre" ng-model="nombre" placeholder="Ingrese su nombre" required></input>
+                </div>
             </div>
-            <h2>Valid: {{orderForm.$valid}}<h2>
+            <div class="form-group">              
+                <label class="col-sm-2 control-label">Edad: </label>
+                <div class="col-sm-10">
+                    <input type="text" name="edad" ng-model="edad" placeholder="Ingrese su edad" required></input>
+                </div>
+            </div>
+            <div class="form-group">              
+                <label class="col-sm-2 control-label">E-mail: </label>
+                <div class="col-sm-10">
+                    <input type="email" name="email" ng-model="email" placeholder="Ingrese su email" required></input>
+                    <span style="color:red" ng-show="orderForm.email.$dirty">
+                    <span ng-show="orderForm.email.$error.email">E-mail Inválido</span>
+                    </span>
+                </div>
+            </div>
+            <div class="form-group">              
+                <label class="col-sm-2 control-label">Teléfono: </label>
+                <div class="col-sm-10">
+                    <input type="text" name="tel" ng-model="tel" placeholder="Ingrese su teléfono" required></input>
+                </div>
+            </div>
+            <div class="col-sm-offset-2 col-sm-10">
+                <button type="submit" class="btn btn-lg" ng-disabled="orderForm.nombre.$dirty && orderForm.nombre.$invalid || orderForm.email.$dirty && orderForm.email.$invalid || orderForm.tel.$dirty && orderForm.tel.$invalid">guardar</button>
+            </div>
+            <h4>Valid: {{orderForm.$valid}}<h4>
         </form>
     </div>
 </div>

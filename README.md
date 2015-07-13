@@ -62,6 +62,46 @@ module.filter("maxlength", function)={
   }
 }
 
+/*****************************************************/
+/*  INSTALACION
+/*****************************************************/
+
+* Ruta donde se instala los modules npm globales:
+  C:\Users\Usuario\AppData\Roaming\npm\node_modules
+
+GIT
+===
+npm install git
+npm intall git-cli
+
+GRUNT
+=====
+npm install -g grunt --save-dev
+grunt --version
+
+Desde el directorio creado ejecutar:
+npm install --save -dev
+grunt --force
+
+BOWER
+=====
+npm install -g bower
+npm update -g bower
+bower install angular
+bower install angular-route
+bower install angular-bootstrap
+
+YEOMAN
+======
+npm install -g yo
+npm install -g generator-angular
+mkdir yo && cd yo
+escribir dentro del directorio: yo -->(Angular o karma)
+configurar paso a paso
+grunt serve (Para poder ejecutar el servidor)
+
+
+
 Tareas:
 ======
 email del formador: pablotnez@gmail.com
@@ -73,3 +113,7 @@ Modulo showorder:
 -email
 -telefono
 -guardar
+
+¿Preguntas?
+===========
+¿Cuando quiero tener 2 ng-views, que hacer?
