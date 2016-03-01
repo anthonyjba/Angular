@@ -2,6 +2,10 @@ Angular
 =======
 Proyectos en Angular
 
+Console Emulator
+================
+cmder (http://cmder.net/)
+
 Pasos del configurar un app Angular
 ===================================
 * npm -install -g express-generator
